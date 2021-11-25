@@ -20,7 +20,9 @@ def index(request):
     })
 
 def categories(request): 
-    items=Listing.objects.raw("SELECT DISTINCT category FROM auctions_listing GROUP BY category")
+    items=Listing.objects.raw("SELECT DISTINCT * FROM auctions_listing GROUP BY auctions_listing.id ORDER BY category")
+    for i in items: 
+        print(f'Items are: {i.category}')
     try:
         w = Watchlist.objects.filter(user=request.user.username)
         wcount=len(w)

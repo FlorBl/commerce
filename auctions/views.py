@@ -20,7 +20,7 @@ def index(request):
     })
 
 def categories(request): 
-    items=Listing.objects.raw("SELECT * FROM auctions_listing")
+    items=Listing.objects.raw("SELECT * FROM AUCTIONS_LISTING GROUP BY CATEGORY")
     try:
         w = Watchlist.objects.filter(user=request.user.username)
         wcount=len(w)

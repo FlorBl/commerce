@@ -68,7 +68,8 @@ def submit(request):
         listtable.category = request.POST.get('category')
         if request.POST.get('link'):
             listtable.link = request.POST.get('link')
-        else :
+            print(listtable.link)
+        else:
             listtable.link = "https://wallpaperaccess.com/full/1605486.jpg"
         listtable.time = dt
         listtable.save()

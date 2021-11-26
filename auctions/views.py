@@ -70,7 +70,7 @@ def submit(request):
             listtable.link = request.POST.get('link')
             print(f'The link is: {listtable.link}')
         else:
-            listtable.link = "https://wallpaperaccess.com/full/1605486.jpg"
+            listtable.link = "https://res.infoq.com/articles/continuous-testing-best-practices/en/headerimage/unlocking-continuous-testing-logo-big-1564402385131.jpg"
         listtable.time = dt
         listtable.save()
         all = Alllisting()

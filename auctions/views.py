@@ -20,7 +20,7 @@ def index(request):
     })
 
 def categories(request): 
-    items=Listing.objects.raw("SELECT DISTINCT * FROM auctions_listing GROUP BY auctions_listing.id ORDER BY category")
+    items=Listing.objects.raw("SELECT MIN(id) AS id, category FROM auctions_listing GROUP BY category")
     for i in items: 
         print(f'Items are: {i.category}')
     try:

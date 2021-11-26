@@ -40,4 +40,4 @@ class Alllisting(models.Model):
     listingid = models.IntegerField()
     title = models.CharField(max_length=64)
     description = models.TextField()
-    link = models.CharField(max_length=64,default=None,blank=True,null=True)
+    link = models.CharField(max_length=300,default=None,blank=True,null=True)

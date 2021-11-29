@@ -27,6 +27,10 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#listings *{
+    border:1px solid red;
+}
+
 .fa-hotjar{
     color:#f2ae72;
 }
@@ -165,9 +169,6 @@ left: 15px;
 #listings{
     width: 100vw !important;
 }
-.card .mb-3{
-    border:10px solid red !important;
-}
 
 #card-listings{
     margin-bottom: 5px;
@@ -175,10 +176,6 @@ left: 15px;
     display: grid;
 }
 
-.card-img{
-    border: 5px solid yellow;
-    max-height: 30vh;
-}
 .container{
         display: grid;  
     grid-gap: 1rem;

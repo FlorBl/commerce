@@ -4,11 +4,11 @@
     <h2>Categories</h2>
 
 </div>
-<div class="container">
+<div  id="container2" class="container">
     <ul>
         {% for i in items %}
         <li>
-            <a href="{% url 'category' i.category %}">{{i.category}}</a>
+            <a class="cat-links" href="{% url 'category' i.category %}">{{i.category}}</a>
             </li>
         {% endfor %}
     </ul>

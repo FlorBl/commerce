@@ -3,17 +3,26 @@ body {
     background-color: rgb(254,238,205);
     border: 2px solid black;
 }
+
+#center{
+  position: absolute;
+  left: 5%;
+}
+
 .container{
     font-size: large;
-    font-size: xx-large;
+    text-align: center;
+    color:black;
     text-align: center;
 }
 
-#container2{
-    color:black;
-    font-size: xx-large;
-    text-align: center;
-    background-color: whitesmoke;
+#noneOnWatch{
+    font-size: large;
+}
+
+
+ul {
+  list-style-type: none;
 }
 .cat-links{
     color: #111;
@@ -87,7 +96,7 @@ i{
 
 #accountStatus{
 
-    border:1px solid red;
+  border:1px solid red;   
   position: absolute;
   bottom: 8px;
   left: 100px;
@@ -107,6 +116,7 @@ i{
 }
 
 #navBurger{
+border:1px solid red;
 position: absolute;
 bottom: 5px;
 left: 15px;
@@ -221,7 +231,6 @@ left: 15px;
     display:none;
   }
 
-
 }
 
 @media only screen and (max-width: 780px) {
@@ -229,6 +238,9 @@ left: 15px;
 #listings{
     width: 100vw !important;
 }
+  .jumbotron *{
+      margin-bottom: 10px;
+  }
 
 #card-listings{
     margin-bottom: 5px;

@@ -10,4 +10,16 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
   document.body.style.backgroundColor = "white";
+
+  
+  
 }
+window.addEventListener('click', function(e){   
+  if (document.getElementById('navBurger').contains(e.target)){
+    // Clicked in box
+    openNav();
+  } else{
+    // Clicked outside the box
+   closeNav();
+  }
+});

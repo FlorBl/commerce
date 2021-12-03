@@ -9,8 +9,9 @@
 <div class="mycontainer">  
 {% for i in items %}
   <div class='box'>
-    <div class="boxTitle">Current bid: {{i.price}}$</div>
-    <div class="child"><img src="{{i.link}}" class="card-img" alt="..."></div>
+    <div class="boxTitle">Current bid: <p>{{i.price}} $</p></div>
+    <div class="image"><img src="{{i.link}}" class="card-img" alt="..."></div>
+    <div><p class="card-text"><small class="text-muted">{{i.time}}</small></p></div>
     <div class="baby"><a href="{% url 'listingpage' i.id %}"><button class="btn btn-outline-success">Bid Now!</button></a></div>
   </div>  
 

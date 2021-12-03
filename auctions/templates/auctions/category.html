@@ -5,16 +5,18 @@
     <h2>Category:{{cat}}</h2>
 
 </div>
-<div id="center">
 <div class="mycontainer">  
 {% for i in items %}
   <div class='box'>
     <div class="boxTitle">Current bid: {{i.price}}$</div>
-    <div class="child"><img src="{{i.link}}" class="card-img" alt="..."></div>
-    <div class="baby"><a href="{% url 'listingpage' i.id %}"><button class="btn btn-outline-success">Bid Now!</button></a></div>
-  </div>  
 
+    <div class="child"><img src="{{i.link}}" class="card-img" alt="..."></div>
+    
+    <div class="baby"><a href="{% url 'listingpage' i.id %}"><button class="btn btn-outline-success">Bid Now!</button></a></div>
+
+
+  </div>  
+</div>
   {% endfor %}
-</div>
-</div>
+
 {% endblock %}

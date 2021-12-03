@@ -1,14 +1,14 @@
 {% extends "auctions/layout.html" %}
 {% block body %}
-<
+
 <div class="container">
-    <h2>Listing:{{i.title}}</h2>
+    <h4>Title: {{i.title}}</h4>
+    <br>
     <div class="container" style="text-align: center;">
         <img src="{{i.link}}" width="30%" alt="...">
     </div>
     <br>
-    <p><b>Description:</b>{{i.description}}</p>
-    <br>
+    <p><b>Description:</b> {{i.description}}</p>
     {% if user.username %}
     <p>
       {% if added %}
@@ -19,7 +19,7 @@
     </p>
     <br>
     {% endif %}
-    <h3>Current Bid:${{i.price}}</h3>
+    <h4>Current Bid: {{i.price}} $</h4>
     {% if user.username %}
     {% if owner %}
     <br>
@@ -30,9 +30,9 @@
     <br>
     <p><b>Details:</b>
     <ul>
-        <li><b>Owner:</b>{{i.owner}}</li>
-        <li><b>Category:</b>{{i.category}}</li>
-        <li><b>Created on:</b>{{i.time}}</li>
+        <li><b>Owner:</b> {{i.owner}}</li>
+        <li><b>Category:</b> {{i.category}}</li>
+        <li><b>Created on:</b> {{i.time}}</li>
     </ul>
     </p>
     {% if error %}
@@ -47,21 +47,23 @@
     {% endif %}
     {% if user.username %}
     <div class="container">
-        <h4>Place your bid:</h4>
+        <h5>Place your bid:</h5>
         <form action="{% url 'bidsubmit' i.id %}" method="POST">
             {% csrf_token %}
-              <div class="form-row align-items-center">
+              <div class="form-group">
                 <div class="col-auto">
-                  <input type="number" class="form-control mb-2" id="inlineFormInput" name="bid" placeholder="your bid...">
+                  <input type="number" class="form-control mb-2" id="inlineFormInput" name="bid" placeholder="Enter desired amount...">
                 </div>
+
                 <div class="col-auto">
                   <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </div>
               </div>
         </form>
-
     </div>
+
     <br>
+
     <div class="container">
       <form action="{% url 'cmntsubmit' i.id %}" method="POST">
         {% csrf_token %}
@@ -72,7 +74,9 @@
         <button class="btn btn-secondary" type="submit">Submit</button>
       </form>
     </div>
+
     <br>
+
     {% endif %}
     {% if comments %}
     <h3>Comments:</h3>

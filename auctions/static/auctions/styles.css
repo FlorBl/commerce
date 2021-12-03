@@ -3,16 +3,18 @@ body {
     background-color:rgb(235,237,240); /*rgb(254,238,205)*/
 }
 
-#center{
+.center{
   position: absolute;
   left: 5%;
 }
 
 .container{
-    font-size: large;
     text-align: center;
+    align-items: center;
     color:black;
 }
+
+
 
 #noneOnWatch{
     font-size: large;
@@ -71,7 +73,8 @@ a{
   text-decoration: none;
 }
 a:hover{
-    color: white;
+    text-decoration: inherit;
+    color: gray;
 }
 
 .other-btn{
@@ -150,6 +153,11 @@ left: 15px;
     margin-top: 10px;
 }
 
+.watchTitle{
+  margin:0 !important;
+  margin-top: 0 !important;
+}
+
 
 .baby{
   width: 100%;
@@ -171,6 +179,9 @@ left: 15px;
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* Nav Greeting */
+#navGreeting{font-size: large;color:whitesmoke; text-align: center;}
 
 /* Navbar for smaller devices */
 .sidenav {
@@ -219,71 +230,99 @@ left: 15px;
     font-size:18px;
   }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-
-
-/* Responsive settings for smaller devices */
-@media only screen and (max-width: 450px) {
-  .logout {
-    display:none;
-  }
-
-}
-
-@media only screen and (max-width: 935px) {
-  .smaller {
-    display:none;
-  }
-    #navBurger {
-    margin-right:15px;
-  }
-
-}
-@media only screen and (min-width: 935px) {
-  #navBurger {
-    display:none;
-  }
-
-}
-
-
-@media only screen and (max-width: 935px) {
-
-#listings{
-    width: 100vw !important;
-}
-  .jumbotron *{
-      margin-bottom: 10px;
-  }
-
+@media screen and (max-width: 263px) {
 #auctions_{
+  width: fit-content;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 30%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); /* for IE 9 */
   -webkit-transform: translate(-50%, -50%); /* for Safari */
 }
-
-#card-listings{
-    margin-bottom: 5px;
-    border: 5px solid black !important;
-    display: grid;
 }
-#navBurger{
+
+
+/* Effets for the container to look better on devices > 330 */
+@media screen and (max-width: 330px) {
+.boxTitle{font-size: medium;margin-bottom: 20%;}}
+
+
+/* Effets for the container to look better on devices < 380 */
+@media screen and (max-width: 380px) {
+  .mycontainer{
+    display: grid;  
+    grid-gap: 0.2rem;  
+    grid-template-columns: 85vw;  
+    /*grid-template-rows: 50vh 50vh 50vh; */
+    text-align:center;
+    width: fit-content;
+
+}
+#listings{width: 100vw !important;}
+.jumbotron *{margin-bottom: 10px;}
+
+#auctions_{
   position: absolute;
-  left: 2%;
-  bottom: 5px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* for IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* for Safari */
+}
+#card-listings{margin-bottom: 5px;}
+#navBurger{position: absolute;left: 2%;bottom: 5px;}
+#accountStatus{display:none;}
 }
 
-#accountStatus{
-  display:none;
+#container2{
+  margin-top: 7%;
+  font-size: x-large;
 }
+.link{
+  margin-bottom: 5px;
+  background-color: white;
 }
 
+/* Effets for the container to look better on devices > 430 */
+@media screen and (max-width: 430px) {.boxTitle{font-size: medium;margin-bottom: 8%;}}
+
+/* Effets for the container to look better on devices > 450 */
+@media screen and (max-width: 450px) {.logout {display:none;}}
+
+/* Effets for the container to look better on devices > 575 */
+@media screen and (min-width: 575px) {#navBurger{position: absolute;left: 15px;top:15px;}}
+
+/* Effets for the container to look better on devices > 600 */
+@media screen and (max-width: 600px) {.boxTitle{font-size: medium;margin-bottom: 4%;}}
+
+/* Effets for the container to look better on devices > 935 */
+@media screen and (max-width: 935px) {
+
+.smaller {display:none;}
+
+#navBurger {margin-right:15px;}
+
+#listings{width: 100vw !important;border:1px solid red;text-align: center;}
+
+.jumbotron *{margin-bottom: 10px;}
+
+#auctions_{
+  position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* for IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* for Safari */
+}
+
+#card-listings{margin-bottom: 5px;display: grid;}
+#navBurger{position: absolute;left: 2%;bottom: 5px;}
+#accountStatus{display:none;}
+}
+
+/* Effets for the container to look better on devices 935+ */
+@media screen and (min-width: 935px) {#navBurger {display:none;}}
 
 /* Effets for the container to look better on devices 1024+ */
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .mycontainer{
     margin:2rem;
     display: grid;  
@@ -295,93 +334,4 @@ left: 15px;
     height: fit-content;
 }
 
-}
-
-@media only screen and (min-width: 380px) {
-
-#auctions_{
-  position: absolute;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); /* for IE 9 */
-  -webkit-transform: translate(-50%, -50%); /* for Safari */
-}
-}
-
-@media only screen and (max-width: 380px) {
-
-#listings{
-    width: 100vw !important;
-}
-  .jumbotron *{
-      margin-bottom: 10px;
-  }
-
-#auctions_{
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); /* for IE 9 */
-  -webkit-transform: translate(-50%, -50%); /* for Safari */
-}
-
-#card-listings{
-    margin-bottom: 5px;
-    border: 5px solid black !important;
-    display: grid;
-}
-#navBurger{
-  position: absolute;
-  left: 2%;
-  bottom: 5px;
-}
-
-#accountStatus{
-  display:none;
-}
-}
-
-@media screen and (max-width: 600px) {
-.boxTitle{
-   font-size: medium;
-   margin-bottom: 4%;
-}
-}
-
-
-@media screen and (max-width: 430px) {
-.boxTitle{
-   font-size: medium;
-   margin-bottom: 8%;
-}
-}
-
-
-@media screen and (max-width: 330px) {
-.boxTitle{
-   font-size: medium;
-   margin-bottom: 20%;
-}
-}
-
-@media screen and (min-width: 575px) {
-#navBurger{
-position: absolute;
-left: 15px;
-top:15px;
-}
-}
-
-@media screen and (max-width: 263px) {
-#auctions_{
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); /* for IE 9 */
-  -webkit-transform: translate(-50%, -50%); /* for Safari */
-}
 }

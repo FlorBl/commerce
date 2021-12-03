@@ -15,6 +15,7 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 {% if user.is_authenticated %}
+    <p id="navGreeting"> Hello,  {{ user.username }} <i class="far fa-grin-alt"></i><p>
       <a class="smaller nav-link" href="{% url 'categories' %}">Categories</a>
       <a class="smaller nav-link" href="{% url 'create' %}">Create a bid</a>
     <a class="smaller nav-link" href="{% url 'mywinnings' %}">My Winnings</a>
@@ -25,7 +26,7 @@
       <a class="smaller nav-link" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Sign out</a>
 {% else %}
   <a class="smaller nav-link" href="{% url 'login' %}">Sign In <i class="fas fa-user-circle"></i></a>
-    <a class="smaller nav-link" href="{% url 'register' %}">Register <i class="fas fa-user-circle"></i></a>
+    <a class="smaller nav-link" href="{% url 'register' %}">Register <i class="fas fa-user-plus"></i></a>
 {% endif %}
 </div>
 

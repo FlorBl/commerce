@@ -17,7 +17,7 @@ function closeNav() {
 window.addEventListener('click', function(e){   
   if (document.getElementById('navBurger').contains(e.target)){
     // Clicked in box
-    openNav();
+    
   } else{
     // Clicked outside the box
    closeNav();

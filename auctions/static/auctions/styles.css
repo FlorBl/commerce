@@ -297,6 +297,18 @@ left: 15px;
 
 }
 
+@media only screen and (min-width: 380px) {
+
+#auctions_{
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* for IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* for Safari */
+}
+}
+
 @media only screen and (max-width: 380px) {
 
 #listings{

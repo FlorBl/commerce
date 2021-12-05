@@ -250,7 +250,7 @@ left: 15px;
 
 
 /* Effets for the container to look better on devices < 380 */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 415px) {
   .mycontainer{
     margin: 0 auto;
     display: grid;  
@@ -288,7 +288,7 @@ left: 15px;
 }
 
 /* Effets for the container to look better on devices > 430 */
-@media only screen and (min-width:381px) and (max-width:501px){
+@media only screen and (min-width:416px) and (max-width:501px){
 	.image{
     height: 30%;
     width: 75%;

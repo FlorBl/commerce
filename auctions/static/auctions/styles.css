@@ -126,6 +126,7 @@ left: 15px;
     /*grid-template-rows: 50vh 50vh 50vh; */
     text-align:center;
     width: fit-content;
+  margin: 0 auto;
 
 }
 
@@ -136,7 +137,7 @@ left: 15px;
     width: 75%;
     margin: 0 auto;
     display:inline-block;
-
+    background-color:#E8E8E8;
 }
 
 .image img{
@@ -251,6 +252,7 @@ left: 15px;
 /* Effets for the container to look better on devices < 380 */
 @media screen and (max-width: 380px) {
   .mycontainer{
+    margin: 0 auto;
     display: grid;  
     grid-gap: 0.2rem;  
     grid-template-columns: 85vw;  
@@ -269,6 +271,7 @@ left: 15px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); /* for IE 9 */
   -webkit-transform: translate(-50%, -50%); /* for Safari */
+
 }
 #card-listings{margin-bottom: 5px;}
 #navBurger{position: absolute;left: 2%;bottom: 5px;}
@@ -282,6 +285,27 @@ left: 15px;
 .link{
   margin-bottom: 5px;
   background-color: white;
+}
+
+/* Effets for the container to look better on devices > 430 */
+@media only screen and (min-width:381px) and (max-width:501px){
+	.image{
+    height: 30%;
+    width: 75%;
+	}
+  .box{
+    background-color: whitesmoke;
+    width: auto;
+    min-height: 38vh;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+	
 }
 
 /* Effets for the container to look better on devices > 430 */
@@ -303,7 +327,7 @@ left: 15px;
 
 #navBurger {margin-right:15px;}
 
-#listings{width: 100vw !important;border:1px solid red;text-align: center;}
+#listings{width: 100vw !important;text-align: center;}
 
 .jumbotron *{margin-bottom: 10px;}
 
@@ -324,7 +348,7 @@ left: 15px;
 /* Effets for the container to look better on devices 1024+ */
 @media screen and (min-width: 1024px) {
   .mycontainer{
-    margin:2rem;
+    margin:0 auto;
     display: grid;  
     grid-gap: 0.2rem;  
     grid-template-columns: 20vw 20vw 20vw 20vw;  

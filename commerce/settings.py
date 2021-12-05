@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
 ]
 
-MIDDLEWARE_CLASSES = [
+MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

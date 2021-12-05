@@ -133,11 +133,11 @@ left: 15px;
 
 .image{
     position: relative;
-    height: 50%;
+    height: 35%;
     width: 75%;
     margin: 0 auto;
     display:inline-block;
-    background-color:#E8E8E8;
+
 }
 
 .image img{
@@ -246,11 +246,12 @@ left: 15px;
 
 /* Effets for the container to look better on devices > 330 */
 @media screen and (max-width: 330px) {
-.boxTitle{font-size: medium;margin-bottom: 20%;}}
+.boxTitle{font-size: medium;}}
 
 
 /* Effets for the container to look better on devices < 380 */
 @media screen and (max-width: 415px) {
+  
   .mycontainer{
     margin: 0 auto;
     display: grid;  
@@ -288,24 +289,18 @@ left: 15px;
 }
 
 /* Effets for the container to look better on devices > 430 */
-@media only screen and (min-width:416px) and (max-width:501px){
-	.image{
-    height: 30%;
-    width: 75%;
-	}
-  .box{
-    background-color: whitesmoke;
-    width: auto;
-    min-height: 38vh;
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@media only screen and (min-width:416px) and (max-width:670px){
+  .mycontainer{
+  margin: 0 auto;
+  display: grid;  
+  grid-gap: 0.2rem;  
+  grid-template-columns: 42vw 42vw;  
+  /*grid-template-rows: 50vh 50vh 50vh; */
+  text-align:center;
+  width: fit-content;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-	
+	.image{height: 30%;width: 75%;}
 }
 
 /* Effets for the container to look better on devices > 430 */
@@ -350,7 +345,7 @@ left: 15px;
   .mycontainer{
     margin:0 auto;
     display: grid;  
-    grid-gap: 0.2rem;  
+    grid-gap: 1rem;  
     grid-template-columns: 20vw 20vw 20vw 20vw;  
     /*grid-template-rows: 50vh 50vh 50vh;*/
     text-align:center;

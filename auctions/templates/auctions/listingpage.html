@@ -2,13 +2,16 @@
 {% block body %}
 
 <div class="container">
-    <h4>Title: {{i.title}}</h4>
-    <br>
+
     <div class="container" style="text-align: center;">
-        <img src="{{i.link}}" width="30%" alt="...">
+        <img src="{{i.link}}" width="100%" alt="...">
     </div>
     <br>
-    <p><b>Description:</b> {{i.description}}</p>
+    <h5 class="listing">{{i.title}}</h5>
+    <br>
+    <h4 class="listing">Last offer: ${{i.price}}</h4>
+    <br>
+    <p class="listing"><b>Description:</b> {{i.description}}</p>
     {% if user.username %}
     <p>
       {% if added %}
@@ -19,7 +22,6 @@
     </p>
     <br>
     {% endif %}
-    <h4>Current Bid: {{i.price}} $</h4>
     {% if user.username %}
     {% if owner %}
     <br>
@@ -28,6 +30,7 @@
     {% endif %}
     {% endif %}
     <br>
+    <div class="listing">
     <p><b>Details:</b>
     <ul>
         <li><b>Owner:</b> {{i.owner}}</li>
@@ -35,6 +38,7 @@
         <li><b>Created on:</b> {{i.time}}</li>
     </ul>
     </p>
+    </div>
     {% if error %}
     <div class="alert alert-danger" role="alert">
         {{error}}
@@ -46,8 +50,9 @@
       </div>
     {% endif %}
     {% if user.username %}
+    <br>
     <div class="container">
-        <h5>Place your bid:</h5>
+        <h5>Make an offer:</h5>
         <form action="{% url 'bidsubmit' i.id %}" method="POST">
             {% csrf_token %}
               <div class="form-group">

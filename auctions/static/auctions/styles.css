@@ -25,16 +25,15 @@ body {
 }
 
 .comments{
-  background-color: white;
+  padding-left: 20px;
   font-size: large;
+  text-align: left;
 }
 
-.comments p{
-left: 5px !important;
+.allcomments{
+  background-color: white;
 }
-.comments i{
-  font-size: xx-large;
-}
+
 hr{    
   display: block;
   height: 1px;
@@ -162,7 +161,7 @@ left: 15px;
 .image{
     position: relative;
     height: 35%;
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     display:inline-block;
 

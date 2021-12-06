@@ -61,7 +61,7 @@
             {% csrf_token %}
               <div class="form-group">
                 <div class="col-auto">
-                  <input type="number" class="form-control mb-2" id="inlineFormInput" name="bid" placeholder="Enter desired amount...">
+                  <input type="number" class="form-control mb-1" id="inlineFormInput" name="bid" placeholder="Enter desired amount...">
                 </div>
 
                 <div class="col-auto">
@@ -88,8 +88,8 @@
 
     {% endif %}
     {% if comments %}
-    <h5>Comments <i class="far fa-comments"></i></h5>
-    <div class="container">
+    <h5>Comments <i class="fas fa-comments"></i></h5>
+    <div class="allcomments container">
           
           {% for c in comments %}
           <div class="comments" style="max-width: auto;">                
@@ -97,6 +97,7 @@
                   <p>{{c.comment}}</p>
                   <p><small class="text-muted">{{c.time}} UTC</small></p>
           </div>
+        <hr/>
            {% endfor %}
            
     </div>

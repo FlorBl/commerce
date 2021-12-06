@@ -15,7 +15,7 @@ function closeNav() {
   
 }
 
-document.addEventListener('DOMContentLoaded', function(){   
+document.addEventListener('click', function(){   
 window.addEventListener('click', function(e){   
   if (document.getElementById('navBurger').contains(e.target)){
     // Clicked in box

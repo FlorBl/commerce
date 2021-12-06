@@ -39,7 +39,7 @@
         <hr/>
         <li><b>Description:</b> 
         <br>
-        <i class="fas fa-quote-left"></i> {{i.description}}y<i class="fas fa-quote-right"></i></li>
+        <i class="fas fa-angle-double-left"></i> {{i.description}}<i class="fas fa-angle-double-right"></i></i></li>
     </ul>
     </p>
     </div>
@@ -88,8 +88,8 @@
 
     {% endif %}
     {% if comments %}
-    <h5>Comments <i class="fas fa-comments"></i></h5>
     <div class="allcomments container">
+    <h5>Comments <i class="fas fa-comments"></i></h5>
           
           {% for c in comments %}
           <div class="comments" style="max-width: auto;">                

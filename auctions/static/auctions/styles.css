@@ -3,17 +3,14 @@ body {
     background-color:rgb(235,237,240); /*rgb(254,238,205)*/
 }
 
-.center{
-  position: absolute;
-  left: 5%;
-}
-
+/* Main container */
 .container{
     text-align: center;
     align-items: center;
     color:black;
 }
 
+/* listingpage.html */
 .listing{
   background-color: white;
   padding: 10px;
@@ -42,24 +39,21 @@ hr{
   margin: 1em 0;
   padding: 0;
   }
-
-#noneOnWatch{
-    font-size: large;
-}
+/*______________________________ */
 
 
 ul {
    padding: 0;
   list-style-type: none;
 }
-.cat-links{
-    color: #111;
-}
+
+/* Main Top Logo */
 #auctions_{
     font-size: x-large;
     height: auto;
 }
 
+/* Icons */
 .fa-bars{
     font-size:x-large;
 }
@@ -126,24 +120,24 @@ i{
   left: 100px;
   font-size: large;
 }
-
+.outsideForm{
+  width: 100vw;
+  height: fit-content;
+}
 .forms{
-  
-    margin-top: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    padding: 45px;
-    background-color:white;
+  height: fit-content;
+  width:fit-content;
+  background-color: white;
+  padding: 50px;
+  margin:0 auto;
 }
 
 #navBurger{
-position: fixed;
-bottom: 5px;
-left: 15px;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .mycontainer{
@@ -310,9 +304,9 @@ left: 15px;
 
 }
 #card-listings{margin-bottom: 5px;}
-#navBurger{position: absolute;left: 2%;bottom: 5px;}
 #accountStatus{display:none;}
 }
+
 
 #container2{
   margin-top: 7%;
@@ -321,8 +315,14 @@ left: 15px;
 .link{
   margin-bottom: 5px;
   background-color: white;
-}
 
+}
+.link a{
+  color:#111;
+}
+.link a:hover{
+  color: gray;
+}
 /* Effets for the container to look better on devices > 430 */
 @media only screen and (min-width:416px) and (max-width:670px){
   .mycontainer{
@@ -344,8 +344,6 @@ left: 15px;
 /* Effets for the container to look better on devices > 450 */
 @media screen and (max-width: 450px) {.logout {display:none;}}
 
-/* Effets for the container to look better on devices > 575 */
-@media screen and (min-width: 575px) {#navBurger{position: absolute;left: 15px;top:15px;}}
 
 /* Effets for the container to look better on devices > 600 */
 @media screen and (max-width: 600px) {.boxTitle{font-size: medium;margin-bottom: 4%;}}
@@ -354,9 +352,6 @@ left: 15px;
 @media screen and (max-width: 935px) {
 
 .smaller {display:none;}
-
-#navBurger {margin-right:15px;}
-
 #listings{width: 100vw !important;text-align: center;}
 
 .jumbotron *{margin-bottom: 10px;}
@@ -368,7 +363,6 @@ left: 15px;
 }
 
 #card-listings{margin-bottom: 5px;display: grid;}
-#navBurger{position: absolute;left: 2%;bottom: 5px;}
 #accountStatus{display:none;}
 }
 
@@ -391,12 +385,7 @@ left: 15px;
 }
 
 @media screen and (max-width:416px),screen and (max-height:500px){
-.forms{
-    top: 60%;
-    padding-top: 5px;
-    padding-bottom: 5px;
 
-}
 #auctions_{
 left: 40%;
 }
@@ -407,11 +396,7 @@ left: 40%;
     padding-bottom: 0px;
     padding-top: 50px;
   }
-.forms{
-    top: 60%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+
 
 }
 /* If user rotates device */

@@ -160,11 +160,11 @@ def bidsubmit(request,listingid):
                 bidtable.bid = user_bid
                 bidtable.save()
             response = redirect('listingpage',id=listingid)
-            response.set_cookie('errorgreen','bid successful!!!',max_age=3)
+            response.set_cookie('errorgreen','Offer made successfully!',max_age=3)
             return response
         else :
             response = redirect('listingpage',id=listingid)
-            response.set_cookie('error','Bid should be greater than current price',max_age=3)
+            response.set_cookie('error','Offer should be greater than current price!',max_age=3)
             return response
     else:
         return redirect('index')

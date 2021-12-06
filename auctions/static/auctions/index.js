@@ -2,7 +2,7 @@
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.body.style.opacity = 0.3;
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -14,12 +14,17 @@ function closeNav() {
   
   
 }
+
+document.addEventListener('DOMContentLoaded', function(){   
 window.addEventListener('click', function(e){   
   if (document.getElementById('navBurger').contains(e.target)){
     // Clicked in box
     
-  } else{
+  } 
+  else{
     // Clicked outside the box
    closeNav();
   }
+});
+
 });

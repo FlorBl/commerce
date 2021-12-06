@@ -2,16 +2,17 @@
 {% block body %}
 
 <div class="container">
-
+<div class="listing">
     <div class="container" style="text-align: center;">
         <img src="{{i.link}}" width="100%" alt="...">
     </div>
     <br>
-    <h5 class="listing">{{i.title}}</h5>
+    <h5>{{i.title}}</h5>
     <br>
-    <h4 class="listing">Last offer: ${{i.price}}</h4>
-    <br>
-    <p class="listing"><b>Description:</b> {{i.description}}</p>
+    <p class="left"><i class="fas fa-user-circle"></i> {{i.owner}}</p>
+    <h5 class="left">Last offer: ${{i.price}}</h5>
+  </div>
+  <br>
     {% if user.username %}
     <p>
       {% if added %}
@@ -30,12 +31,15 @@
     {% endif %}
     {% endif %}
     <br>
-    <div class="listing">
-    <p><b>Details:</b>
-    <ul>
-        <li><b>Owner:</b> {{i.owner}}</li>
-        <li><b>Category:</b> {{i.category}}</li>
-        <li><b>Created on:</b> {{i.time}}</li>
+    <div class="listing left">
+    <p><b>About this item:</b>
+    <ul class="left">
+        <li><b>Category:</b>  {{i.category}}</li>
+        <li><b>Created on:</b>  {{i.time}}</li>
+        <hr/>
+        <li><b>Description:</b> 
+        <br>
+        <i class="fas fa-quote-left"></i> {{i.description}}y<i class="fas fa-quote-right"></i></li>
     </ul>
     </p>
     </div>
@@ -84,25 +88,21 @@
 
     {% endif %}
     {% if comments %}
-    <h3>Comments:</h3>
+    <h5>Comments <i class="far fa-comments"></i></h5>
     <div class="container">
           
           {% for c in comments %}
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{{c.user}}</h5>
-                  <p class="card-text">{{c.comment}}</p>
-                  <p class="card-text"><small class="text-muted">{{c.time}} UTC</small></p>
-                </div>
-              </div>
-            </div>
+          <div class="comments" style="max-width: auto;">                
+                  <h5>{{c.user}}</h5>
+                  <p>{{c.comment}}</p>
+                  <p><small class="text-muted">{{c.time}} UTC</small></p>
           </div>
            {% endfor %}
            
     </div>
     {% endif %}
+
+    
 </div>
 
 

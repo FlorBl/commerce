@@ -75,6 +75,7 @@ ul {
     background-color: rgb(19,25,33);
     color: ghostwhite;
     height: fit-content;
+    border-radius: 0px;
 }
 
 .nav{
